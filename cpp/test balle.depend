@@ -1,0 +1,540 @@
+# depslib dependency file v1.0
+1372543222 source:c:\users\zidrtitz\desktop\z\daaaa\prog\test balle\balle.cpp
+	"Balle.h"
+
+1372543344 c:\users\zidrtitz\desktop\z\daaaa\prog\test balle\balle.h
+	"Const.h"
+	"Joueur.h"
+	<SDL/SDL.h>
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1326114588 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_config.h
+	"SDL_platform.h"
+	"SDL_config_dreamcast.h"
+	"SDL_config_macos.h"
+	"SDL_config_macosx.h"
+	"SDL_config_symbian.h"
+	"SDL_config_win32.h"
+	"SDL_config_os2.h"
+	"SDL_config_minimal.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_platform.h
+
+1326114594 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_config_win32.h
+	"SDL_platform.h"
+
+1326114600 c:\program files\codeblocks\sdl-1.2.15\include\sdl\begin_code.h
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\close_code.h
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_keysym.h
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\program files\codeblocks\sdl-1.2.15\include\sdl\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1372543757 source:c:\users\zidrtitz\desktop\z\daaaa\prog\test balle\main.cpp
+	<cstdlib>
+	<stdlib.h>
+	"Const.h"
+	"Balle.h"
+	<SDL/SDL.h>
+	<string>
+	<vector>
+
+1372542955 c:\users\zidrtitz\desktop\z\daaaa\prog\test balle\const.h
+
+1372542496 c:\users\zidrtitz\desktop\z\daaaa\prog\test balle\joueur.h
+	<string>
+	<SDL/SDL.h>
+	"Const.h"
+
+1372538789 source:c:\users\zidrtitz\desktop\z\daaaa\prog\test balle\joueur.cpp
+	"Joueur.h"
+	"Const.h"
+
+1373033441 source:c:\bang2000\joueur.cpp
+	"Joueur.h"
+	"Const.h"
+	"Balle.h"
+
+1373033441 c:\bang2000\joueur.h
+	<string>
+	<vector>
+	<SDL/SDL.h>
+	"Const.h"
+	<fmodex/fmod.h>
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1326114588 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_config.h
+	"SDL_platform.h"
+	"SDL_config_dreamcast.h"
+	"SDL_config_macos.h"
+	"SDL_config_macosx.h"
+	"SDL_config_symbian.h"
+	"SDL_config_win32.h"
+	"SDL_config_os2.h"
+	"SDL_config_minimal.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_platform.h
+
+1326114594 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_config_win32.h
+	"SDL_platform.h"
+
+1326114600 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\begin_code.h
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\close_code.h
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_keysym.h
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325742240 c:\sdl-devel-1.2.15-mingw32\sdl-1.2.15\include\sdl\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1373031754 c:\bang2000\const.h
+
+1373033715 source:c:\bang2000\main.cpp
+	<cstdlib>
+	<stdlib.h>
+	"Partie.h"
+	"Const.h"
+	"Balle.h"
+	"Controle.h"
+	<SDL/SDL.h>
+	<string>
+	<vector>
+	"Joueur.h"
+	<fmodex/fmod.h>
+
+1373029235 c:\bang2000\balle.h
+	"Const.h"
+	"Joueur.h"
+	<SDL/SDL.h>
+
+1373029235 source:c:\bang2000\balle.cpp
+	"Balle.h"
+
+1373025411 source:c:\bang2000\controle.cpp
+	"Const.h"
+	"Balle.h"
+	"Controle.h"
+	"Joueur.h"
+	<SDL/SDL.h>
+	<string>
+	<vector>
+
+1372884065 c:\bang2000\controle.h
+	"Joueur.h"
+	<vector>
+
+1373031496 source:c:\bang2000\partie.cpp
+	"Partie.h"
+	"Const.h"
+	"Balle.h"
+	"Controle.h"
+	"Joueur.h"
+	<SDL/SDL.h>
+	<string>
+	<vector>
+
+1373030465 c:\bang2000\partie.h
+	<string>
+	<vector>
+	<SDL/SDL.h>
+	"Const.h"
+	"Balle.h"
+
+1373119090 source:c:\users\zidrtitz\desktop\z\daaaa\prog\bang\code-0\balle.cpp
+	"Balle.h"
+
+1373119082 c:\users\zidrtitz\desktop\z\daaaa\prog\bang\code-0\balle.h
+	"Const.h"
+	"Joueur.h"
+	<SDL/SDL.h>
+
+1373372493 c:\users\zidrtitz\desktop\z\daaaa\prog\bang\code-0\const.h
+
+1373131450 c:\users\zidrtitz\desktop\z\daaaa\prog\bang\code-0\joueur.h
+	<string>
+	<vector>
+	<SDL/SDL.h>
+	"Const.h"
+	<fmodex/fmod.h>
+
+1373120678 source:c:\users\zidrtitz\desktop\z\daaaa\prog\bang\code-0\controle.cpp
+	"Const.h"
+	"Balle.h"
+	"Controle.h"
+	"Joueur.h"
+	<SDL/SDL.h>
+	<string>
+	<vector>
+
+1373119090 c:\users\zidrtitz\desktop\z\daaaa\prog\bang\code-0\controle.h
+	"Joueur.h"
+	<vector>
+
+1373131450 source:c:\users\zidrtitz\desktop\z\daaaa\prog\bang\code-0\joueur.cpp
+	"Joueur.h"
+	"Const.h"
+	"Balle.h"
+
+1373373574 source:c:\users\zidrtitz\desktop\z\daaaa\prog\bang\code-0\main.cpp
+	<cstdlib>
+	<stdlib.h>
+	"Partie.h"
+	"Const.h"
+	"Balle.h"
+	"Controle.h"
+	<SDL/SDL.h>
+	<string>
+	<vector>
+	"Joueur.h"
+	<fmodex/fmod.h>
+	<SDL_ttf/SDL_ttf.h>
+
+1373123343 c:\users\zidrtitz\desktop\z\daaaa\prog\bang\code-0\partie.h
+	<string>
+	<vector>
+	<SDL/SDL.h>
+	"Const.h"
+	"Balle.h"
+
+1373119090 source:c:\users\zidrtitz\desktop\z\daaaa\prog\bang\code-0\partie.cpp
+	"Partie.h"
+	"Const.h"
+	"Balle.h"
+	"Controle.h"
+	"Joueur.h"
+	<SDL/SDL.h>
+	<string>
+	<vector>
+
