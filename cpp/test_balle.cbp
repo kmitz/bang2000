@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="test_balle2" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/test_balle2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-w" />
+					<Add option="-g" />
+					<Add directory="C:/SDL-devel-1.2.15-mingw32/SDL-1.2.15/include" />
+					<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-lmingw32" />
+					<Add option="-lSDLmain" />
+					<Add option="-lSDL" />
+					<Add library="C:\SDL-devel-1.2.15-mingw32\SDL-1.2.15\lib\libSDL.dll.a" />
+					<Add library="C:\SDL-devel-1.2.15-mingw32\SDL-1.2.15\lib\libSDLmain.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\libfmodex.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\SDL_ttf.lib" />
+					<Add directory="C:/SDL-devel-1.2.15-mingw32/SDL-1.2.15/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Balle.cpp" />
+		<Unit filename="Balle.h" />
+		<Unit filename="Bonus.cpp" />
+		<Unit filename="Bonus.h" />
+		<Unit filename="Const.h" />
+		<Unit filename="Controle.cpp" />
+		<Unit filename="Controle.h" />
+		<Unit filename="Joueur.cpp" />
+		<Unit filename="Joueur.h" />
+		<Unit filename="Obstacle.cpp" />
+		<Unit filename="Obstacle.h" />
+		<Unit filename="Partie.cpp" />
+		<Unit filename="Partie.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
