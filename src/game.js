@@ -1,5 +1,5 @@
 const sprite_data =       {
-        src : 'Jbas.bmp',
+        src : 'assets/Jbas.bmp',
         width : 33,
         height : 94,
         y : 0,
@@ -19,7 +19,7 @@ export const Game = {
     game.canvas = canvas;
     game.ctx = canvas.getContext('2d');
     this.image = new Image();
-    this.image.src = './assets/Jbas.bmp';
+    this.image.src = sprite_data.src;
     this.image.width = sprite_data.width;
     this.image.height = sprite_data.height;
     this.image.scale = sprite_data.scale;
