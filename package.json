@@ -1,0 +1,16 @@
+{
+  "name": "bang2000",
+  "version": "0.0.0",
+  "description": "A game that bangs",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack serve"
+  },
+  "keywords": [],
+  "author": "kmitz",
+  "license": "",
+  "devDependencies": {
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
