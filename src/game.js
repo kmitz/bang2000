@@ -1,3 +1,5 @@
+import { Input } from './input.js';
+
 const sprite_data =       {
         src : 'assets/Jbas.bmp',
         width : 33,
@@ -14,6 +16,8 @@ export const Game = {
   ctx : null,
   world : null,
   image : null,
+  x : 10,
+  y: 10,
   create : function(canvas){
     let game = Object.create(this);
     game.canvas = canvas;
@@ -40,6 +44,10 @@ export const Game = {
     this.ctx.restore();
 
     // sprite render
+    if (Input.LEFT) this.x--;
+    else if (Input.RIGHT) this.x++;
+    else if (Input.UP) this.y--;
+    else if (Input.DOWN) this.y++;
 
       this.ctx.drawImage(
                   this.image,
@@ -47,8 +55,8 @@ export const Game = {
                   0,
                   this.image.width,
                   this.image.height,
-                  100, //x
-                  100, //y
+                  this.x, //x
+                  this.y, //y
                   this.image.scale*this.image.width,
                   this.image.scale*this.image.height);
   },
