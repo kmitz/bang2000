@@ -1,6 +1,5 @@
 import { Game } from './game.js';
 import { Input } from './input.js';
-import { environment } from './environment.js';
 import { WORLD_WIDTH, WORLD_HEIGHT } from './constants.js';
 
 
