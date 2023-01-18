@@ -1,5 +1,6 @@
 import * as constants from './constants.js';
 import { Input } from './input.js';
+import { Balle } from './balle.js';
 
 
 export class Player{
@@ -10,7 +11,7 @@ export class Player{
         this.vy = constants.VY;
         this.vie = constants.VIE;
         this.score = 0;
-        this.lastShotTime = 0;
+        this.lastShotTime = Date.now();
         this.agonie = 0;
         this.Tballe = constants.TBALLE;
         this.Vballe = constants.VBALLE;
@@ -24,6 +25,8 @@ export class Player{
         this.imgD.src = constants.player_sprites["DROITE"].src;
         this.img = new Image();
         this.useImg(constants._DROITE);
+        this.orientation = constants._DROITE;
+        this.balles = [];
     }
 
     getX() {return this.x;}
@@ -33,25 +36,34 @@ export class Player{
     getImg(){return this.img;}
     getHauteur() {return this.img.height;}
     getLongueur() {return this.img.width;}
+    getVballe() {return this.Vballe;};
+    setVballe(vitesse) {this.Vballe = vitesse;}
+    getTballe() {return this.Tballe;};
+    setTballe(tps) {this.Tballe = tps;}
 
     update(){
         if (!this.estVivant()) return;
         if (Input.LEFT) {
             this.deplacer(-this.getVX(),0)
             this.useImg(constants._GAUCHE); 
+            this.orientation = constants._GAUCHE;
         }
         else if (Input.RIGHT) {
             this.deplacer(this.getVX(),0)
             this.useImg(constants._DROITE); 
+            this.orientation = constants._DROITE;
         }
         else if (Input.UP) {
             this.deplacer(0, -this.getVY())
             this.useImg(constants._HAUT); 
+            this.orientation = constants._HAUT;
         }
         else if (Input.DOWN) {
             this.deplacer(0, this.getVY())
             this.useImg(constants._BAS); 
+            this.orientation = constants._BAS;
         }
+        if (Input.SPACE) this.tirer();
     }
 
     applyBonus (typeBonus){
@@ -127,29 +139,18 @@ export class Player{
         }
     }
 
+    tirer(){
+        const presentTime = Date.now();
 
-/*  TODO
-      tirer(SDL_Surface *imgballeV, SDL_Surface *imgballeH){
-        int presentTime = SDL_GetTicks();
+        if (presentTime - this.lastShotTime > this.Tballe) {
+            const balle = new Balle(this.orientation,this.x, this.y, this.Vballe);
+            this.balles.push(balle);
 
-        if (presentTime - lastShotTime > Tballe) {
-            Balle balle;
-            balle.iniBalle(orientation, x, y, Vballe);
-            if (balle.getOrientation() == HAUT || balle.getOrientation() == BAS){
-                balle.setImg(imgballeV);
-            }
-            else if (balle.getOrientation() == DROITE || balle.getOrientation() == GAUCHE){
-                balle.setImg(imgballeH);
-            }
-            vBalles.push_back(balle);
-
-            lastShotTime = SDL_GetTicks();
-
+            this.lastShotTime = Date.now();
             return true;
         }
         else return false;
-    }*/
-
+    }
 
 }
 

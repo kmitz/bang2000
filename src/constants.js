@@ -66,3 +66,12 @@ export const player_sprites = {
         height : 94
       }, 
 };
+
+export const balle_sprites = {
+	"HORIZONTALE" : {
+		src : "assets/balleH.bmp"
+	},
+	"VERTICALE" : {
+		src : "assets/balleV.bmp"
+	}
+}
