@@ -39,8 +39,30 @@ export const _VBALLE_FREEZE = 2;
 export const _TBALLE_FREEZE = 1000;
 
 
-export const player_sprite = {
+export const player_sprites = {
+	"HAUT" : {
+        src : 'assets/Jhaut.bmp',
+        width : 33,
+        height : 94
+	},
+	"BAS" : {
         src : 'assets/Jbas.bmp',
         width : 33,
         height : 94
-      };
+      },
+	"GAUCHE" : {
+        src : 'assets/Jgauche.bmp',
+        width : 55,
+        height : 94
+      },
+	"DROITE" : {
+        src : 'assets/Jdroite.bmp',
+        width : 55,
+        height : 94
+      },
+    "DEAD" : {
+        src : 'assets/Jdead.bmp',
+        width : 94,
+        height : 94
+      }, 
+};

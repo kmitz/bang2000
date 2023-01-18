@@ -28,8 +28,9 @@ export const Game = {
     this.ctx.restore();
 
     // sprite render
+    if (!this.player.getImg()) return;
     this.ctx.drawImage(
-      this.player.image,
+      this.player.getImg(),
       this.player.getX(),
       this.player.getY());
   },
