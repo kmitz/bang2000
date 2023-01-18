@@ -1,6 +1,7 @@
 import { Game } from './game.js';
 import { Input } from './input.js';
-import { WORLD_WIDTH, WORLD_HEIGHT } from './constants.js';
+import { LONGUEUR, LARGEUR } from './constants.js';
+
 
 
 let padding = 20; //pixels
@@ -38,7 +39,7 @@ const resizeAndScaleCanvas = (canvas, ctx) => {
     // via application d'un style CSS.
     // Source : https://www.html5rocks.com/en/tutorials/canvas/hidpi/
     const dpr = window.devicePixelRatio || 1;
-    const scale_factor = dpr * view_height / WORLD_HEIGHT;
+    const scale_factor = dpr * view_height / LARGEUR;
     canvas.width = view_width * dpr;
     canvas.height = view_height * dpr;
 
@@ -46,7 +47,7 @@ const resizeAndScaleCanvas = (canvas, ctx) => {
     // WARNING : l'ordre des opérations est important : d'abord translation puis mise à l'échelle
     // https://stackoverflow.com/questions/11332608/understanding-html-5-canvas-scale-and-translate-order
     const offset_x = game ? game.offset_x : 0;
-    const shift_x = -(view_height / WORLD_HEIGHT * (WORLD_WIDTH - offset_x) - window.innerWidth)*dpr/2;
+    const shift_x = -(view_height / LARGEUR * (LONGUEUR - offset_x) - window.innerWidth)*dpr/2;
     ctx.translate(shift_x,0);
     
     // Scale all drawing operations by the dpr, so you don't have to worry about the difference.
