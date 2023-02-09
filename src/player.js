@@ -4,7 +4,7 @@ import { Balle } from './balle.js';
 
 
 export class Player{
-    constructor(player_index, xIni, yIni){
+    constructor(playerId, xIni, yIni){
         this.x = xIni;
         this.y = yIni;
         this.vx = constants.VX;
@@ -27,7 +27,7 @@ export class Player{
         this.useImg(constants._DROITE);
         this.orientation = constants._DROITE;
         this.balles = [];
-        this.player_index = player_index;
+        this.id = playerId;
     }
 
     getX() {return this.x;}
@@ -41,30 +41,32 @@ export class Player{
     setVballe(vitesse) {this.Vballe = vitesse;}
     getTballe() {return this.Tballe;};
     setTballe(tps) {this.Tballe = tps;}
+    augScore (val) {this.score += val;}
+
 
     update(){
         if (!this.estVivant()) return;
-        if (player_inputs[this.player_index].LEFT) {
+        if (player_inputs[this.id].LEFT) {
             this.deplacer(-this.getVX(),0)
             this.useImg(constants._GAUCHE); 
             this.orientation = constants._GAUCHE;
         }
-        else if (player_inputs[this.player_index].RIGHT) {
+        else if (player_inputs[this.id].RIGHT) {
             this.deplacer(this.getVX(),0)
             this.useImg(constants._DROITE); 
             this.orientation = constants._DROITE;
         }
-        else if (player_inputs[this.player_index].UP) {
+        else if (player_inputs[this.id].UP) {
             this.deplacer(0, -this.getVY())
             this.useImg(constants._HAUT); 
             this.orientation = constants._HAUT;
         }
-        else if (player_inputs[this.player_index].DOWN) {
+        else if (player_inputs[this.id].DOWN) {
             this.deplacer(0, this.getVY())
             this.useImg(constants._BAS); 
             this.orientation = constants._BAS;
         }
-        if (player_inputs[this.player_index].SHOOT) this.tirer();
+        if (player_inputs[this.id].SHOOT) this.tirer();
     }
 
     applyBonus (typeBonus){

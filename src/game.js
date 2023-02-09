@@ -21,6 +21,7 @@ export const Game = {
     // Update players positions and actions
     this.players.forEach(player => player.update());
     this.players.forEach(player => player.balles.forEach(balle => balle.deplacerBalle()));
+    this.detectCollisions();
   },
   draw : function(){
     // Store the current transformation matrix
@@ -51,6 +52,37 @@ export const Game = {
             b.getY());
         });
     });
+  },
+  detectCollisions : function() {
+    this.players.forEach(shooter => {
+      shooter.balles.forEach(balle => {
+        this.players.forEach(target => {
+          if (shooter.id === target.id) return;
+          if (this.hasCollision(
+            balle.getY(),
+            balle.getX(),
+            balle.getY() + balle.getHauteur(),
+            balle.getX() + balle.getLongueur(),
+            target.getY(),
+            target.getX(),
+            target.getY() + target.getHauteur(),
+            target.getX() + target.getLongueur()
+          )) {
+            target.etreTouche(balle.getDegats());
+            shooter.augScore(balle.getDegats());
+            const index = shooter.balles.indexOf(balle);
+            shooter.balles.splice(index, 1);
+          }
+        })
+      })
+    })
+  },
+  hasCollision : function(top1,left1,bottom1,right1, top2, left2, bottom2, right2){
+    if (right1 < left2){return false;}
+    if (top1 > bottom2){return false;}
+    if (bottom1 < top2){return false;}
+    if (left1 > right2){return false;}
+    else {return true;}
   }
 }
 
