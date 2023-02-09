@@ -23,6 +23,8 @@ export class Player{
         this.imgG.src = constants.player_sprites["GAUCHE"].src;
         this.imgD = new Image();
         this.imgD.src = constants.player_sprites["DROITE"].src;
+        this.imgDead = new Image();
+        this.imgDead.src = constants.player_sprites["DEAD"].src;
         this.img = new Image();
         this.useImg(constants._DROITE);
         this.orientation = constants._DROITE;
@@ -45,6 +47,10 @@ export class Player{
 
 
     update(){
+        if (!this.estVivant() && !this.agonie) {
+            this.agonie = 1;
+            this.useImg(constants._DEAD);
+        }
         if (!this.estVivant()) return;
         if (player_inputs[this.id].LEFT) {
             this.deplacer(-this.getVX(),0)
