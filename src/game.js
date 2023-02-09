@@ -5,13 +5,13 @@ import { Balle } from './balle.js';
 export const Game = {
   canvas : null,
   ctx : null,
-  image : null,
-  player : null,
+  players : [],
   create : function(canvas){
     let game = Object.create(this);
     game.canvas = canvas;
     game.ctx = canvas.getContext('2d');
-    this.player = new Player(100, 100);
+    this.players[0] = new Player(constants.PLAYER_0, 100, 100);
+    this.players[1] = new Player(constants.PLAYER_1, 100, 500);
     Balle.imgballeV.src = constants.balle_sprites["VERTICALE"].src;
     Balle.imgballeH.src = constants.balle_sprites["HORIZONTALE"].src;
 
@@ -19,8 +19,8 @@ export const Game = {
   },
   update : function(){
     // Update players positions and actions
-    this.player.update();
-    this.player.balles.forEach(b => b.deplacerBalle());
+    this.players.forEach(player => player.update());
+    this.players.forEach(player => player.balles.forEach(balle => balle.deplacerBalle()));
   },
   draw : function(){
     // Store the current transformation matrix
@@ -37,20 +37,21 @@ export const Game = {
     this.ctx.fill();
 
     // sprite render
-    if (!this.player.getImg()) return;
-    this.ctx.drawImage(
-      this.player.getImg(),
-      this.player.getX(),
-      this.player.getY());
-    this.player.balles.forEach(b => {
-      if (!b.getImg()) return;
+    this.players.forEach(player => {
+      if (!player.getImg()) return;
       this.ctx.drawImage(
-        b.getImg(),
-        b.getX(),
-        b.getY());
+        player.getImg(),
+        player.getX(),
+        player.getY());
+        player.balles.forEach(b => {
+          if (!b.getImg()) return;
+          this.ctx.drawImage(
+            b.getImg(),
+            b.getX(),
+            b.getY());
+        });
     });
-
-  },
+  }
 }
 
 

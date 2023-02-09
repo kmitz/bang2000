@@ -38,6 +38,10 @@ export const _VY_FREEZE = 1;
 export const _VBALLE_FREEZE = 2;
 export const _TBALLE_FREEZE = 1000;
 
+export const PLAYER_0 = 0;
+export const PLAYER_1 = 1;
+export const PLAYER_2 = 2;
+export const PLAYER_3 = 3;
 
 export const player_sprites = {
 	"HAUT" : {

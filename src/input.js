@@ -1,29 +1,42 @@
+import * as constants from './constants.js';
+
 /**
  * Empty constructor for the Input object.
  */
-let Input = function() {
+export let Input = function() {
   throw new Error('Input should not be instantiated!');
 }
 
-/** @type {boolean} */
-Input.LEFT = false;
-/** @type {boolean} */
-Input.UP = false;
-/** @type {boolean} */
-Input.RIGHT = false;
-/** @type {boolean} */
-Input.DOWN = false;
-/** @type {boolean} */
-Input.ENTER = false;
-/** @type {boolean} */
-Input.SPACE = false;
-/** @type {boolean} */
-Input.F = false;
-Input.B = false;
-Input.G = false;
-Input.T = false;
-/** @type {Object<number, boolean>} */
-Input.MISC_KEYS = {};
+export let player_inputs = {
+    [constants.PLAYER_0] : {
+        "LEFT" : false,
+        "RIGHT" : false,
+        "UP" : false,
+        "DOWN" : false,
+        "SHOOT" : false,
+    },
+    [constants.PLAYER_1] : {
+        "LEFT" : false,
+        "RIGHT" : false,
+        "UP" : false,
+        "DOWN" : false,
+        "SHOOT" : false,
+    },
+    [constants.PLAYER_2] : {
+        "LEFT" : false,
+        "RIGHT" : false,
+        "UP" : false,
+        "DOWN" : false,
+        "SHOOT" : false,
+    },
+    [constants.PLAYER_3] : {
+        "LEFT" : false,
+        "RIGHT" : false,
+        "UP" : false,
+        "DOWN" : false,
+        "SHOOT" : false,
+    },
+}
 
 /**
  * This method is a callback bound to the onkeydown event on the document and
@@ -34,25 +47,25 @@ Input.onKeyDown = function(event) {
   switch (event.keyCode) {
     case 37:
     case 65:
-      Input.LEFT = true;
+      player_inputs[constants.PLAYER_0].LEFT = true;
       break;
     case 38:
     case 87:
-      Input.UP = true;
+      player_inputs[constants.PLAYER_0].UP = true;
       break;
     case 39:
     case 68:
-      Input.RIGHT = true;
+      player_inputs[constants.PLAYER_0].RIGHT = true;
       break;
     case 40:
     case 83:
-      Input.DOWN = true;
+      player_inputs[constants.PLAYER_0].DOWN = true;
       break;
     case 13:
       Input.ENTER = true;
       break;
     case 32:
-      Input.SPACE = true;
+      player_inputs[constants.PLAYER_0].SHOOT = true;
       break;
     case 70:
       Input.F = true;
@@ -67,7 +80,7 @@ Input.onKeyDown = function(event) {
       Input.T = true;
     break;
     default:
-      Input.MISC_KEYS[event.keyCode] = true;
+      //Input.MISC_KEYS[event.keyCode] = true;
       break;
   }
 };
@@ -81,25 +94,25 @@ Input.onKeyUp = function(event) {
   switch (event.keyCode) {
     case 37:
     case 65:
-      Input.LEFT = false;
+      player_inputs[constants.PLAYER_0].LEFT = false;
       break;
     case 38:
     case 87:
-      Input.UP = false;
+      player_inputs[constants.PLAYER_0].UP = false;
       break;
     case 39:
     case 68:
-      Input.RIGHT = false;
+      player_inputs[constants.PLAYER_0].RIGHT = false;
       break;
     case 40:
     case 83:
-      Input.DOWN = false;
+      player_inputs[constants.PLAYER_0].DOWN = false;
       break;
     case 13:
       Input.DOWN = false;
       break;
     case 32:
-      Input.SPACE = false;
+      player_inputs[constants.PLAYER_0].SHOOT = false;
       break;
     case 70:
       Input.F = false;
@@ -114,7 +127,8 @@ Input.onKeyUp = function(event) {
       Input.T = false;
     break;
     default:
-      Input.MISC_KEYS[event.keyCode] = false;
+      //Input.MISC_KEYS[event.keyCode] = false;
+      break;
   }
 };
 
@@ -129,4 +143,3 @@ Input.applyEventHandlers = function(element) {
   element.addEventListener('keydown', Input.onKeyDown);
 };
 
-export { Input };

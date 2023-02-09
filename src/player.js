@@ -1,10 +1,10 @@
 import * as constants from './constants.js';
-import { Input } from './input.js';
+import { player_inputs } from './input.js';
 import { Balle } from './balle.js';
 
 
 export class Player{
-    constructor(xIni, yIni){
+    constructor(player_index, xIni, yIni){
         this.x = xIni;
         this.y = yIni;
         this.vx = constants.VX;
@@ -27,6 +27,7 @@ export class Player{
         this.useImg(constants._DROITE);
         this.orientation = constants._DROITE;
         this.balles = [];
+        this.player_index = player_index;
     }
 
     getX() {return this.x;}
@@ -43,27 +44,27 @@ export class Player{
 
     update(){
         if (!this.estVivant()) return;
-        if (Input.LEFT) {
+        if (player_inputs[this.player_index].LEFT) {
             this.deplacer(-this.getVX(),0)
             this.useImg(constants._GAUCHE); 
             this.orientation = constants._GAUCHE;
         }
-        else if (Input.RIGHT) {
+        else if (player_inputs[this.player_index].RIGHT) {
             this.deplacer(this.getVX(),0)
             this.useImg(constants._DROITE); 
             this.orientation = constants._DROITE;
         }
-        else if (Input.UP) {
+        else if (player_inputs[this.player_index].UP) {
             this.deplacer(0, -this.getVY())
             this.useImg(constants._HAUT); 
             this.orientation = constants._HAUT;
         }
-        else if (Input.DOWN) {
+        else if (player_inputs[this.player_index].DOWN) {
             this.deplacer(0, this.getVY())
             this.useImg(constants._BAS); 
             this.orientation = constants._BAS;
         }
-        if (Input.SPACE) this.tirer();
+        if (player_inputs[this.player_index].SHOOT) this.tirer();
     }
 
     applyBonus (typeBonus){
