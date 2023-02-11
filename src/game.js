@@ -31,11 +31,11 @@ export const Game = {
     this.ctx.setTransform(1, 0, 0, 1, 0, 0);
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-    // Restore the transform
-    this.ctx.restore();
     // Fill background with black
     this.ctx.rect(0, 0, this.canvas.width, this.canvas.height);
     this.ctx.fill();
+    // Restore the transform
+    this.ctx.restore();
 
     // sprite render
     this.players.forEach(player => {
