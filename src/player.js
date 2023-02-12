@@ -116,7 +116,7 @@ export class Player{
         if (this.x+vx > 0 && this.x+vx+this.getLongueur() < constants.LONGUEUR) {
             this.x += vx;
         }
-        if (this.y+vy > 0 && this.y+vy+this.getHauteur() < constants.LARGEUR) {
+        if (this.y+vy > 0 && this.y+vy+this.getHauteur() < constants.HAUTEUR) {
             this.y += vy;
         }
     }

@@ -24,7 +24,7 @@ export const Game = {
     // Effacement des balles qui sortent du terrain de jeu
     this.players.forEach(player => player.balles.forEach(balle => {
       if (balle.getX() > constants.LONGUEUR
-        || balle.getY() > constants.LARGEUR
+        || balle.getY() > constants.HAUTEUR
         || balle.getX() < 0
         || balle.getY() < 0){
         const index = player.balles.indexOf(balle);

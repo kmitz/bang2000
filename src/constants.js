@@ -1,12 +1,12 @@
 
 //enum {UN, DEUX, TROIS, QUATRE};
 //enum {HAUT, BAS, GAUCHE, DROITE};
-export const LARGEUR = 1024;
-export const LONGUEUR = 1280;
+export const HAUTEUR = Math.floor(window.screen.height * 0.8);
+export const LONGUEUR = Math.floor(window.screen.width * 0.8);
 export const TBALLE = 400;
 export const VBALLE = 10;
-export const VX = 3;
-export const VY = 3;
+export const VX = 10; //Vitesse du joueur
+export const VY = 10; //Vitesse du joueur
 export const REFRESH_TIME = 10;
 export const DEGATS = 20;
 export const VIE = 100;
