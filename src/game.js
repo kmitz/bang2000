@@ -91,6 +91,21 @@ export const Game = {
             shooter.balles.splice(index, 1);
           }
         })
+        this.obstacles.forEach(obstacle => {
+          if (this.hasCollision(
+            balle.getY(),
+            balle.getX(),
+            balle.getY() + balle.getHauteur(),
+            balle.getX() + balle.getLongueur(),
+            obstacle.getY(),
+            obstacle.getX(),
+            obstacle.getY() + obstacle.getHauteur(),
+            obstacle.getX() + obstacle.getLongueur()
+          )) {
+            const index = shooter.balles.indexOf(balle);
+            shooter.balles.splice(index, 1);
+          }
+        })
       })
     })
   },
