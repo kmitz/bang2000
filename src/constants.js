@@ -85,3 +85,9 @@ export const obstacle_sprite = {
         src : "assets/bite.bmp"
     },
 }
+
+export const bonus_sprite = {
+    "IMG" : {
+        src : "assets/bonus.bmp"
+    },
+}

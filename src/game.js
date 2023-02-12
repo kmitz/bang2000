@@ -1,13 +1,16 @@
 import * as constants from './constants.js';
+import { globals } from './globals.js';
 import { Player } from './player.js';
 import { Balle } from './balle.js';
 import { Obstacle } from './obstacle.js';
+import { Bonus } from './bonus.js';
 
 export const Game = {
   canvas : null,
   ctx : null,
   players : [],
   obstacles : [],
+  bonus : [],
   create : function(canvas){
     let game = Object.create(this);
     game.canvas = canvas;
@@ -18,7 +21,7 @@ export const Game = {
     Balle.imgballeH.src = constants.balle_sprites["HORIZONTALE"].src;
     for (let i=0; i <constants._NB_OBSTACLES; i++){
       this.obstacles.push(new Obstacle());
-    }
+    }    
     return game;
   },
   update : function(){
@@ -36,6 +39,10 @@ export const Game = {
       }
     }));
     this.detectCollisions();
+    if (globals.nb_tir > constants._NB_TIR_BONUS) {
+      globals.nb_tir = 0;
+      this.bonus.push(new Bonus());
+    }
   },
   draw : function(){
     // Store the current transformation matrix
@@ -68,6 +75,12 @@ export const Game = {
           obstacle.getImg(),
           obstacle.getX(),
           obstacle.getY());
+    });
+    this.bonus.forEach(b => {
+        this.ctx.drawImage(
+          b.getImg(),
+          b.getX(),
+          b.getY());
     })
   },
   detectCollisions : function() {
@@ -108,6 +121,42 @@ export const Game = {
         })
       })
     })
+    this.players.forEach(player => {
+      this.bonus.forEach(b => {
+          if (this.hasCollision(
+            b.getY(),
+            b.getX(),
+            b.getY() + b.getHauteur(),
+            b.getX() + b.getLongueur(),
+            player.getY(),
+            player.getX(),
+            player.getY() + player.getHauteur(),
+            player.getX() + player.getLongueur()
+          )) {
+            if (b.m_typeBonus == constants._BONUS_BLITZ){
+                this.players.forEach(p => {
+                    p.setVX(constants._VX_BLITZ);
+                    p.setVX(constants._VY_BLITZ);
+                    p.setVballe(constants._VBALLE_BLITZ);
+                    p.setTballe(constants._TBALLE_BLITZ);
+                });
+            }
+            else if (b.m_typeBonus == constants._BONUS_FREEZE){
+                this.players.forEach(p => {
+                    p.setVX(constants._VX_FREEZE);
+                    p.setVX(constants._VY_FREEZE);
+                    p.setVballe(constants._VBALLE_FREEZE);
+                    p.setTballe(constants._TBALLE_FREEZE);
+                });
+            }
+            else {
+                player.applyBonus(b.m_typeBonus);
+            }
+            const index = this.bonus.indexOf(b);
+            this.bonus.splice(index, 1);
+          }
+        })
+      })
   },
   hasCollision : function(top1,left1,bottom1,right1, top2, left2, bottom2, right2){
     if (right1 < left2){return false;}

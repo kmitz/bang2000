@@ -1,4 +1,5 @@
 import * as constants from './constants.js';
+import { globals } from './globals.js';
 import { player_inputs } from './input.js';
 import { Balle } from './balle.js';
 
@@ -32,6 +33,8 @@ export class Player{
         this.id = playerId;
     }
 
+    setVX(vx) {this.vx = vx;}
+    setVY(vy) {this.vy = vy;}
     getX() {return this.x;}
     getY() {return this.y;}
     getVX() {return this.vx;}
@@ -156,6 +159,7 @@ export class Player{
             this.balles.push(balle);
 
             this.lastShotTime = Date.now();
+            globals.nb_tir++;
             return true;
         }
         else return false;
