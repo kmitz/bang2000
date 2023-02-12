@@ -21,6 +21,16 @@ export const Game = {
     // Update players positions and actions
     this.players.forEach(player => player.update());
     this.players.forEach(player => player.balles.forEach(balle => balle.deplacerBalle()));
+    // Effacement des balles qui sortent du terrain de jeu
+    this.players.forEach(player => player.balles.forEach(balle => {
+      if (balle.getX() > constants.LONGUEUR
+        || balle.getY() > constants.LARGEUR
+        || balle.getX() < 0
+        || balle.getY() < 0){
+        const index = player.balles.indexOf(balle);
+        player.balles.splice(index, 1);
+      }
+    }));
     this.detectCollisions();
   },
   draw : function(){
