@@ -79,3 +79,9 @@ export const balle_sprites = {
 		src : "assets/balleV.bmp"
 	}
 }
+
+export const obstacle_sprite = {
+    "IMG" : {
+        src : "assets/bite.bmp"
+    },
+}

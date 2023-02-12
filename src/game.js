@@ -1,20 +1,24 @@
 import * as constants from './constants.js';
 import { Player } from './player.js';
 import { Balle } from './balle.js';
+import { Obstacle } from './obstacle.js';
 
 export const Game = {
   canvas : null,
   ctx : null,
   players : [],
+  obstacles : [],
   create : function(canvas){
     let game = Object.create(this);
     game.canvas = canvas;
     game.ctx = canvas.getContext('2d');
-    this.players[0] = new Player(constants.PLAYER_0, 100, 100);
-    this.players[1] = new Player(constants.PLAYER_1, 100, 500);
+    this.players[0] = new Player(100, 100, constants.PLAYER_0);
+    this.players[1] = new Player(100, 500, constants.PLAYER_1);
     Balle.imgballeV.src = constants.balle_sprites["VERTICALE"].src;
     Balle.imgballeH.src = constants.balle_sprites["HORIZONTALE"].src;
-
+    for (let i=0; i <constants._NB_OBSTACLES; i++){
+      this.obstacles.push(new Obstacle());
+    }
     return game;
   },
   update : function(){
@@ -59,6 +63,12 @@ export const Game = {
             b.getY());
         });
     });
+    this.obstacles.forEach(obstacle => {
+        this.ctx.drawImage(
+          obstacle.getImg(),
+          obstacle.getX(),
+          obstacle.getY());
+    })
   },
   detectCollisions : function() {
     this.players.forEach(shooter => {

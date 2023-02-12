@@ -4,7 +4,7 @@ import { Balle } from './balle.js';
 
 
 export class Player{
-    constructor(playerId, xIni, yIni){
+    constructor(xIni, yIni, playerId){
         this.x = xIni;
         this.y = yIni;
         this.vx = constants.VX;
