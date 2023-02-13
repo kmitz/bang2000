@@ -53,6 +53,7 @@ export class Player{
         if (!this.estVivant() && !this.agonie) {
             this.agonie = 1;
             this.useImg(constants._DEAD);
+            new Audio(constants.death_sound).play();
         }
         if (!this.estVivant()) return;
         if (player_inputs[this.id].LEFT) {
@@ -155,6 +156,8 @@ export class Player{
         const presentTime = Date.now();
 
         if (presentTime - this.lastShotTime > this.Tballe) {
+
+            new Audio(constants.shooting_sounds[this.id]).play();
             const balle = new Balle(this.orientation,this.x, this.y, this.Vballe);
             this.balles.push(balle);
 

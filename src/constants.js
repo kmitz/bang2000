@@ -43,6 +43,15 @@ export const PLAYER_1 = 1;
 export const PLAYER_2 = 2;
 export const PLAYER_3 = 3;
 
+export const main_music = "assets/Round 1_ Streets of Rage Music.MP3";
+export const death_sound = "assets/1c3f37_Star_Wars_Wilhelm_Scream_Sound_Effect.mp3";
+export const shooting_sounds = {
+    0 : "assets/Sniper.mp3",
+    1 : "assets/ShotGun.wav",
+    2 : "assets/Sniper.mp3",
+    3 : "assets/ShotGun.wav",
+};
+
 export const player_sprites = {
 	"HAUT" : {
         src : 'assets/Jhaut.bmp',
