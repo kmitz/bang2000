@@ -45,26 +45,37 @@ export let player_inputs = {
  */
 Input.onKeyDown = function(event) {
   switch (event.keyCode) {
-    case 37:
-    case 65:
+    case 74:
+      player_inputs[constants.PLAYER_1].LEFT = true;
+      break;
+    case 73:
+      player_inputs[constants.PLAYER_1].UP = true;
+      break;
+    case 76:
+      player_inputs[constants.PLAYER_1].RIGHT = true;
+      break;
+    case 75:
+      player_inputs[constants.PLAYER_1].DOWN = true;
+      break;
+    case 77:
+      player_inputs[constants.PLAYER_1].SHOOT = true;
+      break;
+    case 81:
       player_inputs[constants.PLAYER_0].LEFT = true;
       break;
-    case 38:
-    case 87:
+    case 90:
       player_inputs[constants.PLAYER_0].UP = true;
       break;
-    case 39:
     case 68:
       player_inputs[constants.PLAYER_0].RIGHT = true;
       break;
-    case 40:
     case 83:
       player_inputs[constants.PLAYER_0].DOWN = true;
       break;
     case 13:
       Input.ENTER = true;
       break;
-    case 32:
+    case 65:
       player_inputs[constants.PLAYER_0].SHOOT = true;
       break;
     case 70:
@@ -92,26 +103,37 @@ Input.onKeyDown = function(event) {
  */
 Input.onKeyUp = function(event) {
   switch (event.keyCode) {
-    case 37:
-    case 65:
+    case 74:
+      player_inputs[constants.PLAYER_1].LEFT = false;
+      break;
+    case 73:
+      player_inputs[constants.PLAYER_1].UP = false;
+      break;
+    case 76:
+      player_inputs[constants.PLAYER_1].RIGHT = false;
+      break;
+    case 75:
+      player_inputs[constants.PLAYER_1].DOWN = false;
+      break;
+    case 77:
+      player_inputs[constants.PLAYER_1].SHOOT = false;
+      break;
+    case 81:
       player_inputs[constants.PLAYER_0].LEFT = false;
       break;
-    case 38:
-    case 87:
+    case 90:
       player_inputs[constants.PLAYER_0].UP = false;
       break;
-    case 39:
     case 68:
       player_inputs[constants.PLAYER_0].RIGHT = false;
       break;
-    case 40:
     case 83:
       player_inputs[constants.PLAYER_0].DOWN = false;
       break;
     case 13:
       Input.DOWN = false;
       break;
-    case 32:
+    case 65:
       player_inputs[constants.PLAYER_0].SHOOT = false;
       break;
     case 70:
