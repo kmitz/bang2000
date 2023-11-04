@@ -4,7 +4,8 @@
   "description": "A game that bangs",
   "main": "main.js",
   "scripts": {
-    "start": "webpack serve"
+    "start": "webpack serve",
+    "deploy" : "scp -r ~/dev/bang2000/src/* staging-web1.thehalvening.com:/var/www/html/bang2000/"
   },
   "keywords": [],
   "author": "kmitz",
