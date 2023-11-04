@@ -131,7 +131,7 @@ Input.onKeyUp = function(event) {
       player_inputs[constants.PLAYER_0].DOWN = false;
       break;
     case 13:
-      Input.DOWN = false;
+      Input.ENTER = false;
       break;
     case 65:
       player_inputs[constants.PLAYER_0].SHOOT = false;
